@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="node_modules/spectrum-colorpicker/spectrum.css"/>
+    <link rel="stylesheet" href="node_modules/reportbro-designer/dist/reportbro.css"/>
+
+    <script> if (typeof module === 'object') { window.module = module; module = undefined; } </script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/spectrum-colorpicker/spectrum.js"></script>
+    <script src="node_modules/autosize/dist/autosize.min.js"></script>
+    <script src="node_modules/jsbarcode/dist/JsBarcode.all.min.js"></script>
+    <script src="node_modules/reportbro-designer/dist/reportbro.js"></script>
+    <script> if (window.module) module = window.module; </script>
+
+    <title>ReportBro</title>
+  </head>
+
+  <body>
+    <div id="reportbro"></div>
+  </body>
+
+  <script type="text/javascript">
+    const { ipcRenderer } = require('electron')
+
+    const saveCallback = () => { 
+      const report = $('#reportbro').reportBro('getReport')
+      ipcRenderer.send('call-saveReport', report)
+    }
+
+    $(document).ready(() => $("#reportbro").reportBro({ saveCallback }))
+  </script>
+
+</html>

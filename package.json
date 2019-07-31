@@ -1,0 +1,16 @@
+{
+  "name": "electron-reporter",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "autosize": "^4.0.2",
+    "electron": "^6.0.0",
+    "jquery": "^3.4.1",
+    "jsbarcode": "^3.11.0",
+    "reportbro-designer": "^1.2.1",
+    "spectrum": "^1.0.1"
+  }
+}
