@@ -22,14 +22,14 @@
   </body>
 
   <script type="text/javascript">
-    const { ipcRenderer } = require('electron')
+    const { ipcRenderer } = require('electron');
 
-    const saveCallback = () => { 
-      const report = $('#reportbro').reportBro('getReport')
-      ipcRenderer.send('call-saveReport', report)
-    }
+    const saveCallback = () => {
+      const report = $('#reportbro').reportBro('getReport');
+      ipcRenderer.send('call-saveReport', report);
+    };
 
-    $(document).ready(() => $("#reportbro").reportBro({ saveCallback }))
+    $(document).ready(() => $('#reportbro').reportBro({ saveCallback }));
   </script>
 
 </html>

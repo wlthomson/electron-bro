@@ -12,5 +12,11 @@
     "jsbarcode": "^3.11.0",
     "reportbro-designer": "^1.2.1",
     "spectrum": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
   }
 }
