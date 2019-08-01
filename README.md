@@ -1,3 +1,3 @@
 # electron-bro
 
-Proof-of-concept of [reportBro](https://www.reportbro.com) in electron.
+Proof-of-concept of [ReportBro](https://www.reportbro.com) in electron.
